@@ -1,0 +1,14 @@
+----> Exploratory Data Analysis --> Day 02
+1.  pd.read_csv('file name')
+2.  df.append(second dataframe)
+3.  df.drop(['column name'])
+4.  df['column name'].map({'value in column':0,'value in column':1})
+5.  df.unique()
+6.  pd.get_dummies(df['column name',drop_first=True])
+7.  pd.concat([first_df,another_df],axis= 0 or 1)
+	1 for column
+	0 for row
+8.  df['column name'].mode()[0]
+9.  df['column name'] = df['column name'].fillna(df['column name'].mode()[0])
+10. df.astype(int)
+

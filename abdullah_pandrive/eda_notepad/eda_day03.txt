@@ -1,0 +1,9 @@
+Exploratory data analysis ---------> day 03
+
+1.df[column name].str.split('any str you want').str[index number]
+2.df[df['column name']=='value in column']
+3.from sklearn.preprocessing import Label	Encoder
+	~ to get int for categorical feature
+	df['column name']=labelencoder.fit_transform(df['column name'])
+4.pd.get_dummies(train_df,columns=['','','',''],drop_first = True)
+	
