@@ -1,0 +1,96 @@
+Area of operation (both ways),type,2013-14,2014-15,2015-16,2016-17,2017-18
+Chattogram - Coxes Bazar,Domestic flight,-,-,-,-,-
+Coxes Bazar - Chattogram,Domestic flight,-,-,-,-,-
+Chattogram - Dhaka,Domestic flight,47,17,7,-,5
+Dhaka - Chattogram,Domestic flight,575,906,168,53,1263
+Coxes Bazar - Dhaka,Domestic flight,-,-,0,429,-
+Dhaka - Coxes Bazar,Domestic flight,-,1,1,-,-
+Dhaka - Barishal,Domestic flight,-,-,0,-,-
+Barishal - Dhaka,Domestic flight,-,-,-,-,-
+Dhaka - Jashore,Domestic flight,-,0.05,0.25,-,-
+Jashore - Dhaka,Domestic flight,-,0.14,0.09,-,-
+Dhaka - Rajshahi,Domestic flight,-,0.39,1,-,-
+Rajshahi - Dhaka,Domestic flight,-,-,-,-,-
+Dhaka - Saidpur,Domestic flight,-,0.01,1,-,-
+Saidpur - Dhaka,Domestic flight,-,-,-,-,-
+Dhaka - Sylhet,Domestic flight,408,682,"1,149",1288,638
+Sylhet - Dhaka,Domestic flight,3,3,11,8,19
+Abu Dhabi - Chattogram,International flight,66,587,137,98,38
+Chattogram - Abu Dhabi,International flight,18,27,18,2130,1190
+Abu Dhabi - Dhaka,International flight,18,132,165,36,3
+Dhaka - Abu Dhabi,International flight,"1,743","3,045","2,788",477,192
+Abu Dhabi - Sylhet,International flight,47,556,412,407,369
+Bangkok - Dhaka,International flight,90,107,228,87,48
+Dhaka - Bangkok,International flight,219,223,346,438,880
+Jakarta - Dhaka,International flight,-,2,-,-,-
+Dhaka - Dammam,International flight,"1,042","1,282","1,634",615,408
+Dammam - Dhaka,International flight,7,12,40,618,756
+Dhaka - Doha,International flight,"1,221","1,368","1,098",252,1566
+Doha - Dhaka,International flight,0.48,2,9,6,2
+Bangkok - Chattogram,International flight,-,-,-,-,-
+Chattogram - Bangkok,International flight,-,-,-,-,-
+Chattogram - Kolkata,International flight,-,-,0.01,-,-
+Kolkata - Chattogram,International flight,-,0.12,3,-,1
+Dhaka - Kolkata,International flight,11,11,26,11,174
+Kolkata - Dhaka,International flight,642,283,176,81,244
+Dhaka - Frankfurt,International flight,228,168,-,-,-
+Frankfurt  - Dhaka,International flight,16,98,-,-,-
+Dhaka - Hong Kong,International flight,434,15,-,-,-
+Hong Kong - Dhaka,International flight,995,5,-,-,-
+Dhaka - Dubai,International flight,"1,575","2,015","1,716",580,233
+Dubai - Dhaka,International flight,184,174,51,6,5
+Dhaka - Jeddah,International flight,"5,304","6,814","8,026",5606,4098
+Jeddah - Dhaka,International flight,514,667,510,457,126
+Dhaka - Kathmandu,International flight,31,192,250,215,158
+Kathmandu - Dhaka,International flight,198,32,10,4,6
+Dhaka - Kuala Lumpur,International flight,"1,023","2,637","2,476",1251,2018
+Kuala Lumpur - Dhaka,International flight,164,815,416,247,237
+Dhaka - Kuwait,International flight,"2,296","2,274","2,557",2581,1583
+Kuwait - Dhaka,International flight,23,26,26,177,165
+Dhaka - London,International flight,"2,462","2,843","2,223",-,843
+London - Dhaka,International flight,331,119,66,-,-
+Dhaka - Muscat,International flight,"1,245","1,359","1,341",491,772
+Muscat - Dhaka,International flight,24,16,31,8,3
+Dhaka - Milan,International flight,-,-,-,-,-
+Milan - Dhaka,International flight,-,-,-,-,-
+Dhaka - Yangon,International flight,161,222,13,2,7
+Yangon - Dhaka,International flight,-,4,3,-,-
+Dhaka - Rome,International flight,406,359,-,-,-
+Rome - Dhaka,International flight,263,472,-,-,-
+Dhaka - Riyadh,International flight,"4,549","7,619","7,226",5573,4874
+Riyadh - Dhaka,International flight,611,989,"1,161",757,663
+Dhaka - Singapore,International flight,598,499,706,540,645
+Singapore - Dhaka,International flight,43,44,48,56,56
+Dhaka - Delhi,International flight,140,-,-,-,-
+Delhi - Dhaka,International flight,234,27,-,-,-
+Dhaka - Amsterdam,International flight,-,-,4,-,-
+Dhaka - Guwahati,International flight,-,-,-,-,-
+Guwahati - Dhaka,International flight,-,-,-,-,-
+Dhaka - Medina,International flight,-,-,-,-,-
+Medina - Dhaka,International flight,-,-,-,-,-
+Chattogram - Doha,International flight,-,2,-,275,384
+Doha - Chattogram,International flight,10,31,3,58,41
+Chattogram - Dubai,International flight,151,166,108,887,962
+Dubai - Chattogram,International flight,94,566,48,1858,31
+Chattogram - Jeddah,International flight,10,0,2,35,991
+Jeddah - Chattogram,International flight,885,"1,072",280,1566,520
+Chattogram - Muscat,International flight,13,14,2,306,2010
+Muscat - Chattogram,International flight,15,59,53,53,23
+Dhaka - Burma,International flight,5,-,-,-,-
+Burma - Dhaka,International flight,7,-,-,-,-
+Dhaka - Karachi,International flight,-,-,-,-,-
+Karachi - Dhaka,International flight,-,-,-,-,-
+Dhaka - Manchester,International flight,-,-,-,-,-
+Manchester - Dhaka,International flight,-,-,-,-,-
+Dhaka - Amman,International flight,-,-,-,-,-
+Dhaka - Manama,International flight,-,-,-,-,-
+Sylhet - Dubai,International flight,-,-,-,-,38
+Jeddah - Sylhet,International flight,357,461,469,636,884
+Dubai - Sylhet,International flight,2,5,291,246,46
+Sylhet - London,International flight,-,-,-,-,-
+London - Sylhet,International flight,"1,166","1,784","2,362",1880,2388
+Doha - Sylhet,International flight,2,1,24,92,41
+Kuala Lumpur - Chattogram,International flight,-,-,-,-,-
+Kuwait - Chattogram,International flight,4,10,32,74,-
+Yangon - Chattogram,International flight,-,-,-,-,-
+Other International,International flight,4,1,-,-,6
