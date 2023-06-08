@@ -1,0 +1,9 @@
+Topics Covers :
+1.Tokenization --> Convert paragraph into sentences on main paragraph
+2.Stemming --> Helps to find the base words examples
+3.Lemmatization --> Helps to find the proper meaningfull base words examples
+4.Cleaning is done with the help of regular expression in main sentences (removing all words which is not from 'A' to 'Z')
+5.Applying stemming in corpus variable in above cell
+6.Applying Lemmitization in corpus variable in above cell
+7.bag of words (BOW) 
+  in (BOW) applying Stopwords.lemmitizer

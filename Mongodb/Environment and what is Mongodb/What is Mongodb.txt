@@ -1,0 +1,29 @@
+
+  Mongodb :
+<>Contains:-
+	1.Mongo: 
+		It is the command line shell
+		that connects to a specific
+		instance of mongod
+	2.Mongod:
+		It is the "Mongo Daemon" it's
+		basically the host process
+		for the database
+<>MongoDb Terms Concepts:-
+	1.Database: 
+		    Collection of rows and 
+		    columns
+	2.Collection:
+		     Collection of javascript 
+		     objects {keys:Values}.
+		     Collection of boxes
+	3.Documents:(BSON) similar to JSON
+		     The indivitual one box 
+		     of number of box
+	4.Fields:
+		 The one indivitual key is 
+		 called FIELD
+		 The one indivitual value is 
+		 called VALUE 
+		       
+
