@@ -1,0 +1,16 @@
+box = //div[contains(@class,'StreamMessage_main___aESy grid')]
+final_list = []
+for twits in box :
+	name_ = twits.xyz XPATH
+	date_ = twits.xyz XPATH
+	signal_ = twits.xyz XPATH
+	twits_ = twits.xyz XPATH
+	twits_dict = {'name':name_,
+		      'date':date_,
+		      'signal':signal_,
+		      'twits_':twits_}
+	final_list.append(twits_dict)
+
+
+
+

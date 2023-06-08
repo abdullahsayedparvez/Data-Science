@@ -1,0 +1,40 @@
+EDA Datetime series Day 05 ---
+
+1. library pandas_datareader
+	see in the code how it is read
+2. library yfinance
+	see in the code how it is read
+3. df['column name here'].plot(figsize=(12,4))
+4. ylim,xlim,color,ls   in .plot function
+5. df.index
+6. df.loc['row 1':'row 2']
+7. df.loc['row 1':'row 2']['column name if want']
+8. df.reset_index()
+9. df['column_name'].dt.date
+	if want only date in datetime column 
+10.df['column_name'].dt.time
+	if want only time in datetime column 
+
+Date_time more from here
+
+11. library datetime
+12. datetime(2022,11,21)
+13. datetime.now()
+14. one function is return in jupyter see it
+15. datetime.now().date()
+	take datetime.now() in variable
+16. datetime.now().day
+17.datetime.now().weekday()
+18.datetime.now().year
+19.datetime.now().month
+20.datetime.now().second
+
+
+
+
+
+
+
+
+
+

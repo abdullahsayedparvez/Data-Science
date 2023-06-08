@@ -1,0 +1,24 @@
+Exploratory data analysis ---------> day 01
+
+1.  how to read a file
+2.  df.head()
+3.  df.shape
+4.  df.columns
+5.  df.info()
+6.  df.describe()
+7.  df.isnull().sum()
+8.  heatmap    [data show on shart]
+9.  pd.merge
+10. df.dtypes
+11. df.values_counts()
+12. pie chart  [data show on shart]
+13. df.groupby
+14. barplot    [data show on shart]
+15. countplot  [data show on shart]
+16. df.index 
+17. df.values
+18. plt.pie(city_index[:5],labels = city_label[:5],autopct="%1.2f%%")
+19. df.reset_index()
+20. df.groupby(['column name']).size()
+
+---- < remember this on your mind > ----
