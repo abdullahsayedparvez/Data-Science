@@ -1,0 +1,165 @@
+
+import pymongo
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
+import re
+import time
+from datetime import date
+from datetime import timedelta
+import json
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from datetime import datetime 
+import json
+import requests
+from pymongo.errors import BulkWriteError
+from pprint import pprint
+import nltk
+import string
+nltk.download('stopwords')
+from nltk.corpus import stopwords
+import emoji
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
+
+
+client = pymongo.MongoClient("mongodb://localhost:27017")
+db = client['Final_Year_Project']
+collection = db[f'stock_twits_dataset']
+collection_stemming = db[f'stock_twits_dataset_stemming']
+# While True :
+status = 'pending'
+
+    # Take While loop here
+while (True):
+    # We can change the limit of records from here
+    records = collection.find({'Cleaning_status': status}).limit(100)
+    id_list          = []
+    twits_list       = []
+    signal_list      = []
+    stock_name_list  = [] 
+    date_list        = []
+    index_number = 0  # The purpose of this variable is to traverse each row in dataframe
+    punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    stop_words = set(stopwords.words('english'))
+    def remove_stopwords(x):
+        return " ".join([word for word in str(x).split() if word not in stop_words])   # it is in use
+    def remove_punctuation(x):
+        return " ".join([word for word in str(x).spit() if word not in punc ])
+    for record in records:
+        #     print(record)
+        twit                 = record['Twits']
+        signal               = record['Signal']
+        stock_name           = record['stock_name']
+        cleaning_status      = record['Cleaning_status']
+        date                 = record['Date']
+        id_name              = record['_id']
+
+        # Adding all the 100 TWITS in a list 
+        twits_list.append(twit)
+
+        # Adding all the 100 SIGNALS in a list 
+        signal_list.append(signal)
+
+        # Adding all the 100 Stock name in a list 
+        stock_name_list.append(stock_name)
+
+        # Adding all the 100 date in a list 
+        date_list.append(date)
+
+        # Adding all the 100 _id in a list 
+        id_list.append(id_name)
+
+
+        #Adding all columns in dataframe with there values
+        df = pd.DataFrame(list(zip(twits_list,signal_list)),columns =['twits','signal'])
+        df['stock_name'] = stock_name_list
+        df['Date'] = date_list
+
+
+
+        # resetting the index column 
+        df.reset_index(inplace=True)
+
+
+
+        # Getting rows one by one with the help of loc and variable index_number
+        twits_unclean = df.loc[index_number, 'twits']
+        print(twits_unclean)
+        print(type(twits_unclean))
+
+
+
+        #Removing Links from dataframe
+        print('---------------------------------Links------------------------------------')
+        df['twits'] = df['twits'].replace(r'http\S+', '', regex=True).replace(r'www\S+', '', regex=True)
+
+
+
+
+        #Lowercase the whole twits column
+        print('---------------------------------lowercase------------------------------------')
+        df['twits'] = df['twits'].apply(lambda x: x.lower())
+
+
+
+
+        #Eliminating the pumctuation 
+        print('----------------------------eliminate punctuation-------------------------------')
+        #     translator = str.maketrans('', '', string.punctuation)
+        #     df['twits'] = df['twits'].apply(lambda x: x.translate(translator))  # from every twits string.punctuation (!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~) should remove  
+        df['twits'] = df['twits'].str.replace('[^\w\s]',' ',regex=True)
+
+
+
+
+        #Eliminating stopwords 
+        print('----------------------------removing stopwords-------------------------------')
+        df['twits'] = df['twits'].apply(lambda x : remove_stopwords(x))
+
+
+
+
+        #Eliminating Emoji from dataframe
+        print('----------------------------removing emojis-------------------------------')
+        df['twits'] = df['twits'].apply(lambda s: emoji.replace_emoji(s, ''))
+
+
+
+        # Stemming on dataframe
+        print('----------------------------stemming is done-------------------------------')
+        stemmer = PorterStemmer()
+        df['twits'] = df['twits'].str.split()
+        df['twits'] = df['twits'].apply(lambda x: [stemmer.stem(y) for y in x]) # Stem every word.
+        df['twits'] = df['twits'].apply(lambda x: " ".join(x))
+        print('___________________________________________________________________________________________________________________')
+
+        
+    # For displaying purpose only
+    print(len(twits_list))
+    print(len(signal_list))
+
+
+    #Converting dataframe into a list of dictionary
+    documents = df.to_dict(orient='records')
+
+
+    # Inserting the 100 stemming records in list of dictionary
+    collection_stemming.insert_many(documents)
+    print(f'inserting 100 records in database is done ')
+
+    
+    # Status completion in Stock_twits_dataset 
+    for i in id_list:
+        collection.update_many({'_id':i}, {'$set': {'Cleaning_status':'complete'}})
+        #     status_initial = { '_id': i } 
+        #     status_update = { "$set": {'Cleaning_status': 'complete'}}
+        #     collection.update_many(status_initial,status_update)
+    
+    
+    print('100 done')
+    print('#################################################Status updated in Stock_twits_dataset ###########################################################################')
