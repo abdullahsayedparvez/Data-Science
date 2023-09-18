@@ -1,0 +1,13 @@
+1 --> How to create multiple pages using flask
+    @app.route("/")
+    def welcome():
+        return "<h1>Welcome to Stock Prediction</h2>"
+2 --> how to see changes in a single page (it avoid of opening multiple pages)
+    if __name__ == "__main__":
+        app.run(debug=True)
+
+
+
+
+
+
